@@ -14,6 +14,7 @@ public class HelloMoonFragment extends Fragment {
 	private final String TAG = "HelloMoonFragment";
 	private Button mPlayButton;
 	private Button mStopButton;
+	private Button mPauseButton;
 	
 	private AudioPlayer mPlayer = new AudioPlayer();
 	
@@ -26,10 +27,12 @@ public class HelloMoonFragment extends Fragment {
 		
 		mPlayButton = (Button) v.findViewById(R.id.hellomoon_playButton);
 		mStopButton = (Button) v.findViewById(R.id.hellomoon_stopButton);
+		mPauseButton = (Button) v.findViewById(R.id.hellomoon_pauseButton);
 		
 		mOnClickListener mListener = new mOnClickListener();
 		mPlayButton.setOnClickListener(mListener);
 		mStopButton.setOnClickListener(mListener);
+		mPauseButton.setOnClickListener(mListener);
 		
 		return v;
 	}
@@ -50,6 +53,9 @@ public class HelloMoonFragment extends Fragment {
 				break;
 			case R.id.hellomoon_stopButton:
 				mPlayer.stop();
+				break;
+			case R.id.hellomoon_pauseButton:
+				mPlayer.pause();
 				break;
 			default:
 				break;
