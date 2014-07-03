@@ -20,9 +20,6 @@ public class HelloMoonActivity extends FragmentActivity {
 		return true;
 	}
 	
-	// TODO Create HelloMoonFragment
-	// --
-	
 	
 
 }
