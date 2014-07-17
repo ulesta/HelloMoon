@@ -25,11 +25,12 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090004;
+        public static final int action_settings=0x7f090005;
         public static final int helloMoonFragment=0x7f090000;
-        public static final int hellomoon_pauseButton=0x7f090002;
-        public static final int hellomoon_playButton=0x7f090001;
-        public static final int hellomoon_stopButton=0x7f090003;
+        public static final int hellomoon_pauseButton=0x7f090003;
+        public static final int hellomoon_playButton=0x7f090002;
+        public static final int hellomoon_stopButton=0x7f090004;
+        public static final int hellomoon_surfaceView=0x7f090001;
     }
     public static final class layout {
         public static final int activity_hello_moon=0x7f030000;
@@ -41,6 +42,7 @@ public final class R {
     public static final class raw {
         public static final int apollo_17_stroll=0x7f040000;
         public static final int one_small_step=0x7f040001;
+        public static final int pikachu=0x7f040002;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;

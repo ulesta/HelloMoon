@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -15,8 +17,9 @@ public class HelloMoonFragment extends Fragment {
 	private Button mPlayButton;
 	private Button mStopButton;
 	private Button mPauseButton;
+	private SurfaceHolder mSurfaceHolder;
 	
-	private AudioPlayer mPlayer = new AudioPlayer();
+	private Player mPlayer = new Player();
 	
 	// Override onCreateView to inflate view
 	@Override
@@ -24,6 +27,10 @@ public class HelloMoonFragment extends Fragment {
 			Bundle savedInstanceState) {
 		
 		View v = inflater.inflate(R.layout.fragment_hello_moon, container, false);
+		
+		SurfaceView mSurfaceView = (SurfaceView) v.findViewById(R.id.hellomoon_surfaceView);
+		mSurfaceHolder = mSurfaceView.getHolder();
+		
 		
 		mPlayButton = (Button) v.findViewById(R.id.hellomoon_playButton);
 		mStopButton = (Button) v.findViewById(R.id.hellomoon_stopButton);
@@ -49,7 +56,7 @@ public class HelloMoonFragment extends Fragment {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.hellomoon_playButton:
-				mPlayer.play(getActivity());
+				mPlayer.play(getActivity(), mSurfaceHolder);
 				break;
 			case R.id.hellomoon_stopButton:
 				mPlayer.stop();
@@ -64,5 +71,5 @@ public class HelloMoonFragment extends Fragment {
 		
 	}
 	
-	
+
 }
